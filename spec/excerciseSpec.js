@@ -1,8 +1,8 @@
 
 describe("Document class", function () {
-  it("should create an object with an attribute called - employeeName and it should be initialized in the constructor", function () {
+  it("should create an object with an attribute called - EmployeeName and it should be initialized in the constructor", function () {
     let doc = new Document("elevation");
-    expect(doc.employeeName).toEqual("elevation");
+    expect(doc.EmployeeName).toEqual("elevation");
   });
 });
 
@@ -116,8 +116,8 @@ describe("Employee class", function () {
     let office = new Office();
     let employee = new Employee("elevation");
     employee.work(office);
-    expect(office.documents[0].employeeName).toEqual("elevation");
-    expect(office.documents[9].employeeName).toEqual("elevation");
+    expect(office.documents[0].EmployeeName).toEqual("elevation");
+    expect(office.documents[9].EmployeeName).toEqual("elevation");
   });
 });
 
@@ -135,12 +135,12 @@ describe("Office class", function () {
 
     expect(office.documents.length).toEqual(30);
 
-    expect(office.documents[0].employeeName).toEqual("Hadas");
-    expect(office.documents[9].employeeName).toEqual("Hadas");
-    expect(office.documents[10].employeeName).toEqual("Brandon");
-    expect(office.documents[19].employeeName).toEqual("Brandon");
-    expect(office.documents[20].employeeName).toEqual("Omer");
-    expect(office.documents[29].employeeName).toEqual("Omer");
+    expect(office.documents[0].EmployeeName).toEqual("Hadas");
+    expect(office.documents[9].EmployeeName).toEqual("Hadas");
+    expect(office.documents[10].EmployeeName).toEqual("Brandon");
+    expect(office.documents[19].EmployeeName).toEqual("Brandon");
+    expect(office.documents[20].EmployeeName).toEqual("Omer");
+    expect(office.documents[29].EmployeeName).toEqual("Omer");
   });
 });
 
