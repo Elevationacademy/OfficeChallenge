@@ -31,12 +31,12 @@ describe("Manager class", function () {
   it("should create an object with an attribute called - employees that is initialized with an empty array", function () {
     expect(manager.employees).toEqual(jasmine.any(Array));
   });
-  it("should have a function called - hireEmpoyee that pushes a new employee to the employees array", function () {
+  it("should have a function called - hireEmployee that pushes a new employee to the employees array", function () {
     manager.employees.length = 0;
     manager.hireEmployee("Hadas");
     expect(manager.employees[0].name).toEqual("Hadas");
   });
-  it("should have a function called - hireEmpoyee that pushes a new employee to the employees array to the end of the employess array", function () {
+  it("should have a function called - hireEmployee that pushes a new employee to the *end* of the employess array", function () {
     manager.employees.length = 0;
     manager.hireEmployee("Hadas");
     manager.hireEmployee("Brandon");
@@ -45,7 +45,7 @@ describe("Manager class", function () {
     expect(manager.employees[1].name).toEqual("Brandon");
     expect(manager.employees[2].name).toEqual("Omer");
   });
-  it("should have a function called - askEmployeesToWork that invokes the employee's work function", function () {
+  it("should have a function called - askEmployeesToWork that invokes each employee's work function", function () {
     manager.employees.length = 0;
     manager.hireEmployee("Hadas");
     manager.hireEmployee("Brandon");
